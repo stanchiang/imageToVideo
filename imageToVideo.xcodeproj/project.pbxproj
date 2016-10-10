@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F691DB5D1D53B55F00A40281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691DB5C1D53B55F00A40281 /* AppDelegate.swift */; };
-		F691DB5F1D53B55F00A40281 /* ViewController-v0.1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691DB5E1D53B55F00A40281 /* ViewController-v0.1.swift */; };
 		F691DB641D53B55F00A40281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F691DB631D53B55F00A40281 /* Assets.xcassets */; };
 		F691DB671D53B55F00A40281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F691DB651D53B55F00A40281 /* LaunchScreen.storyboard */; };
-		F691DB6F1D53BD3100A40281 /* ViewController-v0.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691DB6E1D53BD3100A40281 /* ViewController-v0.2.swift */; };
 		F691DB711D53BF9E00A40281 /* RenderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691DB701D53BF9E00A40281 /* RenderSettings.swift */; };
 		F691DB731D53BFC000A40281 /* ImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691DB721D53BFC000A40281 /* ImageAnimator.swift */; };
 		F691DB751D53C00200A40281 /* VideoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691DB741D53C00200A40281 /* VideoWriter.swift */; };
@@ -111,11 +109,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Stanley Chiang";
 				TargetAttributes = {
 					F691DB581D53B55F00A40281 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4C8V97R8N3;
 					};
 				};
 			};
@@ -156,11 +155,9 @@
 			files = (
 				F691DB731D53BFC000A40281 /* ImageAnimator.swift in Sources */,
 				F691DB711D53BF9E00A40281 /* RenderSettings.swift in Sources */,
-				F691DB5F1D53B55F00A40281 /* ViewController-v0.1.swift in Sources */,
 				F691DB5D1D53B55F00A40281 /* AppDelegate.swift in Sources */,
 				F691DB7A1D53C08B00A40281 /* ViewController.swift in Sources */,
 				F691DB751D53C00200A40281 /* VideoWriter.swift in Sources */,
-				F691DB6F1D53BD3100A40281 /* ViewController-v0.2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +189,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -238,8 +237,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -258,6 +259,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -267,10 +269,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4C8V97R8N3;
 				INFOPLIST_FILE = imageToVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stan.imageToVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -278,10 +282,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4C8V97R8N3;
 				INFOPLIST_FILE = imageToVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stan.imageToVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -304,6 +310,7 @@
 				F691DB6D1D53B55F00A40281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

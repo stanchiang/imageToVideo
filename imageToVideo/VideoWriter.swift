@@ -33,14 +33,14 @@ class VideoWriter {
         
         let pixelBuffer = pixelBufferOut!
         
-        CVPixelBufferLockBaseAddress(pixelBuffer, 0)
+        CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
         let data = CVPixelBufferGetBaseAddress(pixelBuffer)
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let context = CGBitmapContextCreate(data, Int(size.width), Int(size.height),
                                             8, CVPixelBufferGetBytesPerRow(pixelBuffer), rgbColorSpace, CGImageAlphaInfo.PremultipliedFirst.rawValue)
         
-        CGContextClearRect(context, CGRectMake(0, 0, size.width, size.height))
+        CGContextClearRect(context!, CGRectMake(0, 0, size.width, size.height))
         
         let horizontalRatio = size.width / image.size.width
         let verticalRatio = size.height / image.size.height
@@ -52,8 +52,8 @@ class VideoWriter {
         let x = newSize.width < size.width ? (size.width - newSize.width) / 2 : 0
         let y = newSize.height < size.height ? (size.height - newSize.height) / 2 : 0
         
-        CGContextDrawImage(context, CGRectMake(x, y, newSize.width, newSize.height), image.CGImage)
-        CVPixelBufferUnlockBaseAddress(pixelBuffer, 0)
+        CGContextDrawImage(context!, CGRectMake(x, y, newSize.width, newSize.height), image.CGImage!)
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
         return pixelBuffer
     }

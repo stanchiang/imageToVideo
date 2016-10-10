@@ -28,7 +28,7 @@ struct RenderSettings {
         // Using the CachesDirectory ensures the file won't be included in a backup of the app.
         let fileManager = NSFileManager.defaultManager()
         if let tmpDirURL = try? fileManager.URLForDirectory(.CachesDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true) {
-            return tmpDirURL.URLByAppendingPathComponent(videoFilename).URLByAppendingPathExtension(videoFilenameExt)
+            return tmpDirURL.URLByAppendingPathComponent(videoFilename)!.URLByAppendingPathExtension(videoFilenameExt)!
         }
         fatalError("URLForDirectory() failed")
     }
